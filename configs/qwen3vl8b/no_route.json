@@ -1,0 +1,30 @@
+{
+  "base_model": "models/Qwen3-VL-8B-Thinking",
+  "backbone_name": "Qwen3-VL-8B-Thinking",
+  "variant": "no_route",
+  "seed": 42,
+  "epochs": 2,
+  "batch_size": 2,
+  "eval_batch_size": 2,
+  "accumulation": 8,
+  "lora_lr": 5e-05,
+  "module_lr": 0.0002,
+  "layers": [
+    11,
+    23,
+    31
+  ],
+  "rank": 32,
+  "energy_weight": 0.001,
+  "checkpoint_every": 100,
+  "expected_test_samples": 2409,
+  "output_dir": "outputs/qwen3vl8b/no_route",
+  "train_data": "data/clean/train.jsonl",
+  "val_data": "data/clean/val.jsonl",
+  "test_data": "data/clean/test.jsonl",
+  "expected_split_sizes": {
+    "train": 19344,
+    "val": 2393,
+    "test": 2409
+  }
+}
